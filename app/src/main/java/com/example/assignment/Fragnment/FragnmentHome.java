@@ -60,7 +60,7 @@ public class FragnmentHome extends Fragment {
         // Sử dụng Retrofit để gọi API và lấy dữ liệu
         // Sử dụng Retrofit để gọi API và lấy dữ liệu
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.169.102:8080/")
+                .baseUrl("http://10.24.3.236:8080/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -94,7 +94,7 @@ public class FragnmentHome extends Fragment {
     public void onResume() {
         super.onResume();
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.169.102:8080/")
+                .baseUrl("http://10.24.3.236:8080/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

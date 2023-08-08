@@ -79,7 +79,7 @@ public class AddFragnment extends Fragment {
              }
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://192.168.169.102:8080/") // Thay thế bằng URL của MongoDB API
+                        .baseUrl("http://10.24.3.236:8080/") // Thay thế bằng URL của MongoDB API
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
                 MyApi userService = retrofit.create(MyApi.class);
@@ -96,6 +96,11 @@ public class AddFragnment extends Fragment {
                         if (response.isSuccessful()) {
                             foodModel model = response.body();
                             Toast.makeText(getContext(), "thành công", Toast.LENGTH_SHORT).show();
+                            ediname.setText("");
+                            edtgia.setText("");
+                            edilinkanh.setText("");
+                            editmota.setText("");
+
 
                         } else {
                             Log.e("MainActivity", "Response unsuccessful: " + response.message());

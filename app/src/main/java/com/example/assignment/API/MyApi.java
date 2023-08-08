@@ -22,7 +22,7 @@ public interface MyApi {
 
     Gson gson = new GsonBuilder().setDateFormat("dd-MM-yyyy").create();
    MyApi MY_API = new Retrofit.Builder()
-           .baseUrl("http://192.168.169.102:8080/")
+           .baseUrl("http://10.24.3.236:8080/")
            .addConverterFactory(GsonConverterFactory.create(gson))
            .build()
            .create(MyApi.class);

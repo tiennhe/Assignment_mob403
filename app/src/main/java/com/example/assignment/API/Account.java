@@ -20,7 +20,7 @@ import retrofit2.http.POST;
 public interface Account {
     Gson gson = new GsonBuilder().setDateFormat("dd-MM-yyyy").create();
     Account acountservice = new Retrofit.Builder()
-            .baseUrl("http://192.168.169.102:8080/")
+            .baseUrl("http://10.24.3.236:8080/")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
             .create(Account.class);

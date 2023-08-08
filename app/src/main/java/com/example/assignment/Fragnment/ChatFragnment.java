@@ -70,7 +70,7 @@ private ArrayList<MessengerModel> arrayList = new ArrayList<>() ;
 
         Handler mainHandler = new Handler(Looper.getMainLooper());
         try {
-            Socket socket = IO.socket("http://192.168.169.102:8080/");
+            Socket socket = IO.socket("http://10.24.3.236:8080/");
             socket.connect();
             socket.on("chat message", new Emitter.Listener() {
                 @Override

@@ -97,7 +97,7 @@ public void delete(){
 
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.169.102:8080/") // Thay thế bằng URL của MongoDB API
+                .baseUrl("http://10.24.3.236:8080/") // Thay thế bằng URL của MongoDB API
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -179,7 +179,7 @@ public void delete(){
                 String mota1 = edimota.getText().toString().trim();
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://192.168.169.102:8080/") // Thay thế bằng URL của MongoDB API
+                        .baseUrl("http://10.24.3.236:8080/") // Thay thế bằng URL của MongoDB API
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
                 MyApi userService = retrofit.create(MyApi.class);
@@ -193,7 +193,9 @@ public void delete(){
                 call.enqueue(new Callback<foodModel>() {
                     @Override
                     public void onResponse(Call<foodModel> call, Response<foodModel> response) {
-                        name.setText("Tên Sản Phẩm: " +name1);
+                        name.setText("Tên Sản Phẩm: " +response);
+
+
                         description.setText("Mô tả: "+mota1);
                         gia.setText(String.valueOf("Gía sản Phẩm" +gia1));
                         Picasso.get().load(link1).into(imageView);
